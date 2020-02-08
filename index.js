@@ -15,14 +15,18 @@ incrementButton.addEventListener('click', e => dispatch({ type: "CHANGEVALUE", v
 const decrementButton = document.getElementById('decrement');
 decrementButton.addEventListener('click', e => dispatch({ type: "CHANGEVALUE", value: - 1 }));
 
-// Dispatch the "INCREMENT FIVE" action every time the +5 button is pressed
+// Dispatch the "INCREMENTFIVE" action every time the +5 button is pressed
 const incrementFiveButton = document.getElementById('incrementFive');
 incrementFiveButton.addEventListener('click', e => dispatch({ type: "CHANGEVALUE", value: 5 }));
 
-// Dispatch the "DECREMENT FIVE" action every time the +5 button is pressed
+// Dispatch the "DECREMENTFIVE" action every time the +5 button is pressed
 const decrementFiveButton = document.getElementById('decrementFive');
 decrementFiveButton.addEventListener('click', e => dispatch({ type: "CHANGEVALUE", value: - 5 }));
 
-// Dispatch the "colors" action every time a color button is pressed
+// Dispatch the "CHANGECOLOR" action every time a color button is pressed
 const colorDropdown = document.getElementById('colors');
-colorDropdown.addEventListener('change', e => dispatch({ type: "CHANGECOLOR", value: colorDropdown.value }));
+colorDropdown.addEventListener('change', e => dispatch({ type: "CHANGECOLOR", color: colorDropdown.value }));
+
+// Dispatch the "CUSTOMNUM" action every time a number is entered
+const customNum = document.getElementById('changeNumber');
+customNum.addEventListener('input', e => dispatch({ type: "CUSTOMNUMBER", value: Number(customNum.value )}));
