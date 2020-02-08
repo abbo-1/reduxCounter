@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Simple Counter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="app">
@@ -13,6 +14,17 @@
         <button id="decrement">-1</button>
         <button id="incrementFive">+5</button>
         <button id="decrementFive">-5</button>
+
+        <select id = "colors">
+            <option value="#ff0000">Red</option>
+            <option value="0000ff">Blue</option>
+            <option value="00ff00">Green</option>
+            <option value="ffff00">Yellow</option>
+        </select>
+        <br><br>
+        <form action="submit">
+            <label for="number">Enter a number</label><input type="integer" id="number">
+          </form>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.1/redux.min.js"></script>
